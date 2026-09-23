@@ -8,7 +8,7 @@
 
 サイト本体と画像、OGP、faviconを作成済みです。お問い合わせ先は後日設定する方針のため準備中の案内を表示しています。参考写真と掲載誌データは未提供のため、実際の誌面ギャラリーはデータを追加した際に表示されます。
 
-インターネットへの公開は未完了です。メタ情報に設定したURLは制作時の予定URLであり、公開済みURLではありません。公開先が決まったら、下記のSEO設定を更新してください。
+公開URLは https://michiocorporation.github.io/aoineko/ です。共有画像は https://michiocorporation.github.io/aoineko/og.png です。ローカルの変更を公開サイトへ反映するには、GitHubへのコミット・pushとGitHub Pagesのデプロイ完了が必要です。
 
 任意のWebサーバーを使用する場合は、`index.html`、`styles.css`、`script.js`、`site-config.js`、`assets/`、`og.png`、`favicon.svg`、`robots.txt`、`sitemap.xml` をアップロードしてください。`.git/` や作業用ファイルは公開する必要はありません。
 
@@ -56,6 +56,16 @@ publications: [
 公開名は「蒼井 音呼」「AOI NEKO」。本文・メタ情報では「蒼井音呼」を使用します。人物の実績・経歴は依頼文に基づき、未提供の俳句、写真、学校名、経歴年などは補っていません。
 
 独自ドメインに移す際は、`index.html` の canonical / og:url / og:image / twitter:image / JSON-LD、`sitemap.xml` と `robots.txt` のURLを本番ドメインに揃えてください。OGP・LINE・SNS用カードは `og.png`（1200 × 630px）です。
+
+## LINEで共有した際の画像
+
+LINEのURLプレビューは、HTMLの `og:title`・`og:description`・`og:image` を参照します。`index.html` の `<head>` に設定済みで、JavaScriptを実行せず取得できます。画像は `og.png`（1200 × 630px、PNG）です。
+
+公開URLを変更する場合、画像を指す `og:image` と `twitter:image` も、認証なしで取得できる実際の画像のHTTPS URLに更新してください。ローカルのプレビューURLは共有用に使用しません。
+
+設定変更をGitHubへ反映し、GitHub Pagesのデプロイが完了した後に、公開URLをLINEに貼り直して確認します。LINEアプリ内での表示確認は別途必要です。
+
+参考: https://developers.line.biz/ja/faq/tags/line-official-account/
 
 ## 動き・操作
 

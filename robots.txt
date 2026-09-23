@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aoi-neko-profile.michio-corporation.chatgpt.site/sitemap.xml
